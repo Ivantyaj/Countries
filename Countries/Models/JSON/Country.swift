@@ -12,7 +12,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Country : Codable {
+struct Country : Decodable {
     
 	let name : String?
 	let topLevelDomain : [String]?
@@ -95,4 +95,10 @@ struct Country : Codable {
 		cioc = try values.decodeIfPresent(String.self, forKey: .cioc)
 	}
 
+}
+
+//var countries: [Country] = []
+
+struct CountryApiList : Decodable{
+    static var countries: [Country] = []
 }

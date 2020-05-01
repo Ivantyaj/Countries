@@ -10,17 +10,24 @@ import SwiftUI
 import URLImage
 
 struct ContentView: View {
+    
+    @State var networkingManager = NetworkManager()
+    @State var countriesTest: [Country] = NetworkManager().countryList
+    
     var body: some View {
         NavigationView {
-            List (countryData, id: \.name) { country in
-//                NavigationLink(destination: LandmarkDetail(landmark: country)) {
-//                    LandmarkRow(landmark: country)
-//                }
-                CounrtyRow()
+            //            List (countryData, id: \.name) { country in
+            ////                NavigationLink(destination: LandmarkDetail(landmark: country)) {
+            ////                    LandmarkRow(landmark: country)
+            ////                }
+            //                CounrtyRow(countryCode: country.alpha2Code!, countryName: country.name!)
+            //            }
+            List (countriesTest, id: \.name) { country in
+                CounrtyRow(countryCode: country.alpha2Code!, countryName: country.name!)
             }
-            .navigationBarTitle(Text("Landmarks"))
+            .navigationBarTitle(Text("Countries"))
         }
-
+        
     }
 }
 

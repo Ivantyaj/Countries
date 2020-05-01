@@ -6,11 +6,16 @@
 //  Copyright © 2020 IVDEV. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import SwiftUI
-import CoreLocation
+import Combine
 
-let countryData: [Country] = load("Data.json")
+
+
+//let countryData: [Country] = load("Data.json")
+//let countryData: [Country] = loadData("https://restcountries.eu/rest/v2/all")
+//let countryData: [Country] = loadD()
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
@@ -19,6 +24,8 @@ func load<T: Decodable>(_ filename: String) -> T {
         else {
             fatalError("Couldn't find \(filename) in main bundle.")
     }
+    
+    
     
     do {
         data = try Data(contentsOf: file)
@@ -34,3 +41,28 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
+class NetworkManager: ObservableObject {
+    var didChange = PassthroughSubject<NetworkManager, Never>()
+    
+    var countryList = [Country]() {
+        didSet{
+            didChange.send(self)
+        }
+    }
+    
+    init() {
+        guard let url = URL(string: "https://restcountries.eu/rest/v2/all")
+            else {return}
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else {return}
+            
+            let countryList = try! JSONDecoder().decode([Country].self, from: data)
+            
+            DispatchQueue.main.async {
+                self.countryList = countryList
+                //countries = countryList
+            }
+        }.resume()
+    }
+}
