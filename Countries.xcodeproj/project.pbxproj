@@ -22,6 +22,7 @@
 		E25B906F245C4DBE00B243A3 /* RegionalBlocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B906A245C4DBE00B243A3 /* RegionalBlocs.swift */; };
 		E25B9070245C4DBE00B243A3 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B906B245C4DBE00B243A3 /* Translations.swift */; };
 		E25B9071245C4DBE00B243A3 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B906C245C4DBE00B243A3 /* Languages.swift */; };
+		E25B9074245CA64000B243A3 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B9073245CA64000B243A3 /* CountryInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		E25B906A245C4DBE00B243A3 /* RegionalBlocs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionalBlocs.swift; sourceTree = "<group>"; };
 		E25B906B245C4DBE00B243A3 /* Translations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		E25B906C245C4DBE00B243A3 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		E25B9073245CA64000B243A3 /* CountryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				E23A893F245C1E45000B79B8 /* AppDelegate.swift */,
 				E23A8941245C1E45000B79B8 /* SceneDelegate.swift */,
 				E23A8943245C1E45000B79B8 /* ContentView.swift */,
+				E25B9073245CA64000B243A3 /* CountryInfo.swift */,
 				E23A895A245C265A000B79B8 /* CounrtyRow.swift */,
 				E23A8945245C1E49000B79B8 /* Assets.xcassets */,
 				E23A894A245C1E49000B79B8 /* LaunchScreen.storyboard */,
@@ -197,6 +200,7 @@
 			files = (
 				E23A8940245C1E45000B79B8 /* AppDelegate.swift in Sources */,
 				E25B9070245C4DBE00B243A3 /* Translations.swift in Sources */,
+				E25B9074245CA64000B243A3 /* CountryInfo.swift in Sources */,
 				E25B906D245C4DBE00B243A3 /* Currencies.swift in Sources */,
 				E25B906F245C4DBE00B243A3 /* RegionalBlocs.swift in Sources */,
 				E25B9071245C4DBE00B243A3 /* Languages.swift in Sources */,

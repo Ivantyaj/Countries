@@ -19,8 +19,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             
+            
+            
             List (countries, id: \.name) { country in
-                CounrtyRow(countryCode: country.alpha2Code!, countryName: country.name!)
+                
+                NavigationLink(destination: CountryInfo()) {
+                    CounrtyRow(countryCode: country.alpha2Code!, countryName: country.name!)
+                }
+                
+                
             }
             .navigationBarTitle(Text("Countries"))
             
