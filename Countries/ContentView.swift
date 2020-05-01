@@ -7,10 +7,20 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List (countryData, id: \.name) { country in
+//                NavigationLink(destination: LandmarkDetail(landmark: country)) {
+//                    LandmarkRow(landmark: country)
+//                }
+                CounrtyRow()
+            }
+            .navigationBarTitle(Text("Landmarks"))
+        }
+
     }
 }
 
@@ -19,3 +29,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

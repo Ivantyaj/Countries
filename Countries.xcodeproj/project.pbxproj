@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,15 @@
 		E23A8946245C1E49000B79B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23A8945245C1E49000B79B8 /* Assets.xcassets */; };
 		E23A8949245C1E49000B79B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E23A8948245C1E49000B79B8 /* Preview Assets.xcassets */; };
 		E23A894C245C1E49000B79B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23A894A245C1E49000B79B8 /* LaunchScreen.storyboard */; };
-		E23A8954245C1F70000B79B8 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A8953245C1F70000B79B8 /* CountryData.swift */; };
+		E23A8954245C1F70000B79B8 /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A8953245C1F70000B79B8 /* DataWorker.swift */; };
+		E23A8959245C20A5000B79B8 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = E23A8958245C20A5000B79B8 /* Data.json */; };
+		E23A895B245C265A000B79B8 /* CounrtyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A895A245C265A000B79B8 /* CounrtyRow.swift */; };
+		E23A8961245C2D84000B79B8 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = E23A8960245C2D84000B79B8 /* URLImage */; };
+		E25B906D245C4DBE00B243A3 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B9068245C4DBE00B243A3 /* Currencies.swift */; };
+		E25B906E245C4DBE00B243A3 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B9069245C4DBE00B243A3 /* Country.swift */; };
+		E25B906F245C4DBE00B243A3 /* RegionalBlocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B906A245C4DBE00B243A3 /* RegionalBlocs.swift */; };
+		E25B9070245C4DBE00B243A3 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B906B245C4DBE00B243A3 /* Translations.swift */; };
+		E25B9071245C4DBE00B243A3 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B906C245C4DBE00B243A3 /* Languages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +33,14 @@
 		E23A8948245C1E49000B79B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E23A894B245C1E49000B79B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E23A894D245C1E49000B79B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E23A8953245C1F70000B79B8 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		E23A8953245C1F70000B79B8 /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
+		E23A8958245C20A5000B79B8 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		E23A895A245C265A000B79B8 /* CounrtyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounrtyRow.swift; sourceTree = "<group>"; };
+		E25B9068245C4DBE00B243A3 /* Currencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
+		E25B9069245C4DBE00B243A3 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		E25B906A245C4DBE00B243A3 /* RegionalBlocs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionalBlocs.swift; sourceTree = "<group>"; };
+		E25B906B245C4DBE00B243A3 /* Translations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
+		E25B906C245C4DBE00B243A3 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23A8961245C2D84000B79B8 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +78,7 @@
 				E23A893F245C1E45000B79B8 /* AppDelegate.swift */,
 				E23A8941245C1E45000B79B8 /* SceneDelegate.swift */,
 				E23A8943245C1E45000B79B8 /* ContentView.swift */,
+				E23A895A245C265A000B79B8 /* CounrtyRow.swift */,
 				E23A8945245C1E49000B79B8 /* Assets.xcassets */,
 				E23A894A245C1E49000B79B8 /* LaunchScreen.storyboard */,
 				E23A894D245C1E49000B79B8 /* Info.plist */,
@@ -81,9 +98,23 @@
 		E23A8955245C1F89000B79B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E23A8953245C1F70000B79B8 /* CountryData.swift */,
+				E23A8953245C1F70000B79B8 /* DataWorker.swift */,
+				E23A8958245C20A5000B79B8 /* Data.json */,
+				E25B9072245C4DCE00B243A3 /* JSON */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E25B9072245C4DCE00B243A3 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E25B9068245C4DBE00B243A3 /* Currencies.swift */,
+				E25B9069245C4DBE00B243A3 /* Country.swift */,
+				E25B906C245C4DBE00B243A3 /* Languages.swift */,
+				E25B906A245C4DBE00B243A3 /* RegionalBlocs.swift */,
+				E25B906B245C4DBE00B243A3 /* Translations.swift */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +133,9 @@
 			dependencies = (
 			);
 			name = Countries;
+			packageProductDependencies = (
+				E23A8960245C2D84000B79B8 /* URLImage */,
+			);
 			productName = Countries;
 			productReference = E23A893C245C1E45000B79B8 /* Countries.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +164,9 @@
 				Base,
 			);
 			mainGroup = E23A8933245C1E45000B79B8;
+			packageReferences = (
+				E23A895F245C2D84000B79B8 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = E23A893D245C1E45000B79B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +184,7 @@
 				E23A894C245C1E49000B79B8 /* LaunchScreen.storyboard in Resources */,
 				E23A8949245C1E49000B79B8 /* Preview Assets.xcassets in Resources */,
 				E23A8946245C1E49000B79B8 /* Assets.xcassets in Resources */,
+				E23A8959245C20A5000B79B8 /* Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +196,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E23A8940245C1E45000B79B8 /* AppDelegate.swift in Sources */,
+				E25B9070245C4DBE00B243A3 /* Translations.swift in Sources */,
+				E25B906D245C4DBE00B243A3 /* Currencies.swift in Sources */,
+				E25B906F245C4DBE00B243A3 /* RegionalBlocs.swift in Sources */,
+				E25B9071245C4DBE00B243A3 /* Languages.swift in Sources */,
 				E23A8942245C1E45000B79B8 /* SceneDelegate.swift in Sources */,
-				E23A8954245C1F70000B79B8 /* CountryData.swift in Sources */,
+				E23A8954245C1F70000B79B8 /* DataWorker.swift in Sources */,
+				E23A895B245C265A000B79B8 /* CounrtyRow.swift in Sources */,
+				E25B906E245C4DBE00B243A3 /* Country.swift in Sources */,
 				E23A8944245C1E45000B79B8 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E23A895F245C2D84000B79B8 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.15;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E23A8960245C2D84000B79B8 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E23A895F245C2D84000B79B8 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E23A8934245C1E45000B79B8 /* Project object */;
 }
