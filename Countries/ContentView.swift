@@ -14,18 +14,22 @@ struct ContentView: View {
     @State var networkingManager = NetworkManager()
     @State var countriesTest: [Country] = NetworkManager().countryList
     
+    @State var countries: [Country] = []
+    
     var body: some View {
         NavigationView {
-            //            List (countryData, id: \.name) { country in
-            ////                NavigationLink(destination: LandmarkDetail(landmark: country)) {
-            ////                    LandmarkRow(landmark: country)
-            ////                }
-            //                CounrtyRow(countryCode: country.alpha2Code!, countryName: country.name!)
-            //            }
-            List (countriesTest, id: \.name) { country in
+            
+            List (countries, id: \.name) { country in
                 CounrtyRow(countryCode: country.alpha2Code!, countryName: country.name!)
             }
             .navigationBarTitle(Text("Countries"))
+            
+        }
+        .onAppear{
+            Api().getData {
+                (countries) in
+                self.countries = countries
+            }
         }
         
     }
