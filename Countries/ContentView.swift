@@ -23,7 +23,7 @@ struct ContentView: View {
             
             List (countries, id: \.name) { country in
                 
-                NavigationLink(destination: CountryInfo()) {
+                NavigationLink(destination: CountryInfo(country: country)) {
                     CounrtyRow(countryCode: country.alpha2Code!, countryName: country.name!)
                 }
                 

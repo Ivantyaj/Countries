@@ -11,12 +11,12 @@ import SwiftUI
 import Combine
 
 
-
-//let countryData: [Country] = load("Data.json")
+//For debug
+let countryData: [Country] = load("Data.json")
 //let countryData: [Country] = loadData("https://restcountries.eu/rest/v2/all")
 //let countryData: [Country] = loadD()
 
-
+//For debug
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
